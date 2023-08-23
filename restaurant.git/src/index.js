@@ -1,1 +1,3 @@
-console.log('hi')
+import component from './elements.js'
+
+component()
