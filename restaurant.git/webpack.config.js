@@ -1,9 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
   
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    elements: './src/index.js'
+  },
 
   devtool: 'inline-source-map',
   devServer: {
@@ -17,24 +21,12 @@ module.exports = {
 
       title: 'Restaurant',
 
-    })
+    }),
+
+    new NodePolyfillPlugin()
 
   ],
 
-  module: {
-    rules: [
-      // Define rules for processing different types of files
-      {
-        test: /\.js$/, // Apply the rule to .js files
-        exclude: /node_modules/, // Exclude files from node_modules directory
-        use: {
-          loader: 'babel-loader', // Use Babel loader for .js files
-        },
-      },
-      // Add more rules for other file types like stylesheets, images, etc.
-    ],
-  },
-  // Other configurat
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -46,6 +38,34 @@ module.exports = {
     runtimeChunk: 'single',
 
   },
+  module: {
+    rules: [
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: "defaults" }]
+            ]
+          }
+        }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+      test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+    ]
+  }
+],
+}
 }
 
 
