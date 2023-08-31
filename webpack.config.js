@@ -7,7 +7,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
 
-    static: './dist',
+    static: './src',
 
   },
   plugins: [
@@ -15,7 +15,7 @@ module.exports = {
     new HtmlWebpackPlugin({
 
       title: 'Restaurant',
-
+      template: './src/template.html',
     })
 
   ],
@@ -50,7 +50,4 @@ module.exports = {
       },
     ]
   }
-},
-
-
-//remember polyfill
+}
