@@ -1,4 +1,3 @@
-import _ from 'lodash';
-import './style.css';
-import './elements.js'
+import { component } from './elements.js'
 
+component()
