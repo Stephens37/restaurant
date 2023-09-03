@@ -1,7 +1,10 @@
 import _ from 'lodash';
 import { component } from './elements.js'
+import './style.css'
 
 component()
+
+const body = document.querySelector('body')
 
 function header () {
   const header = document.createElement('header')
@@ -22,6 +25,7 @@ function header () {
   header.appendChild(home)
   header.appendChild(menu)
   header.appendChild(contact)
+  body.appendChild(header)
 }
 header()
 
@@ -31,5 +35,6 @@ function footer () {
   const resource1 = document.createElement('div')
   resource1.innerText = 'Resource'
   footer.append(resource1)
+  body.appendChild(footer)
 }
 footer()
