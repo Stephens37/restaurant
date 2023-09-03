@@ -1,27 +1,36 @@
-import Pasta from './pasta.jpeg'
+import Sandwich1 from './mainsandwich.jpg'
 import _ from 'lodash'
-require('./style.css')
+import './style.css'
 
 const content = document.querySelector('#content')
 
 export function component () {
-  const header = document.createElement('header');
-
-  // Lodash, now imported by this script
-  header.textContent = 'Restaurant';
-  content.appendChild(header)
-
   // Add the image to our existing div.
 
-  const myPasta = new Image();
+  const name = document.createElement('div')
+  name.setAttribute('id', name)
+  name.innerText = 'Santiagos Sandwiches'
+  content.appendChild(name)
 
-  myPasta.src = Pasta;
-  content.appendChild(myPasta)
+  const mainSandwich = new Image();
+  mainSandwich.src = Sandwich1;
+  mainSandwich.setAttribute('id', 'mainsandwich')
+  content.appendChild(mainSandwich)
 
-  const description = document.createElement('div')
-  description.classList = 'description'
-  description.innerText = 'This restaurant is great'
-  content.appendChild(description)
+  const review = document.createElement('div')
+  review.setAttribute = ('id', 'description')
+  review.innerText = 'This restaurant is great'
+  content.appendChild(review)
 
-  return { header, myPasta, description }
+  const hours = document.createElement('div')
+  hours.setAttribute('id', 'hours')
+  hours.innerText = 'Open every day 9AM-7PM'
+  content.appendChild(hours)
+
+  const location = document.createElement('div')
+  location.setAttribute('id', 'location')
+  location.innerText = 'Located at 555 Tomato Ave'
+  content.appendChild(location)
+
+  return { name, mainSandwich, review }
 }

@@ -19,8 +19,33 @@ header {
 #content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
 }
+
+#name {
+    grid-row: 1 / span 1;
+    font-size: 30px;
+}
+
+#mainsandwich {
+    grid-row: 2 / span 1;
+    height: 100px;
+    width: 200px;
+}
+
+#review {
+    grid-row: 3 / span 1;
+}
+
+#hours {
+    grid-row: 4 / span 1;
+}
+
+#location {
+    grid-row: 5 / span 1;
+}
+
+
 
 footer {
     font-size: 10px;
