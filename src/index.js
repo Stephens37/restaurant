@@ -3,16 +3,6 @@ import { component } from './elements.js'
 
 component()
 
-const body = document.getElementsByTagName('body')
-let contentParent = document.createElement('div')
-contentParent = document.querySelector('id', '#contentparent')
-const content = document.querySelector('#content')
-
-function frame () {
-  body.append(contentParent)
-  contentParent.append(content)
-}
-//remember up here
 function header () {
   const header = document.createElement('header')
 
