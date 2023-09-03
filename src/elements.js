@@ -8,7 +8,7 @@ export function component () {
   // Add the image to our existing div.
 
   const name = document.createElement('div')
-  name.setAttribute('id', name)
+  name.setAttribute('id', 'name')
   name.innerText = 'Santiagos Sandwiches'
   content.appendChild(name)
 
