@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import { homeContent } from './elements.js'
-import { component } from './elements.js'
+import { homeContent, component } from './elements.js'
 import './style.css'
-import { menuContent } from './menu.js'
-import { menu } from './menu.js'
+import { menuContent, menu } from './menu.js'
+import { contactContent, contact } from './contact.js'
+
 
 component()
 menu()

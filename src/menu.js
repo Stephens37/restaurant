@@ -42,8 +42,8 @@ export function menu () {
   menuContent.appendChild(sandwich3)
 
   const sand3Text = document.createElement('div')
-  sand1Text.setAttribute('id', 'sand3text')
+  sand3Text.setAttribute('id', 'sand3text')
   sand3Text.innerText = 'Spaghetti Sandwich'
-  menuContent.appendChild(sand1Text)
+  menuContent.appendChild(sand3Text)
 }
 menu()

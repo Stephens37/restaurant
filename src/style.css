@@ -81,6 +81,12 @@ header {
     grid-row: 5 / span 1;
 }
 
+#menucontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+}
+
 footer {
     font-size: 10px;
     grid-column: 1 / span 3;
