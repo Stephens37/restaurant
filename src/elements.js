@@ -1,4 +1,4 @@
-import Sandwich1 from './mainsandwich.jpg'
+import MainSandwich from './mainsandwich.jpg'
 import _ from 'lodash'
 import './style.css'
 
@@ -16,7 +16,7 @@ export function component () {
   homeContent.appendChild(name)
 
   const mainSandwich = new Image()
-  mainSandwich.src = Sandwich1
+  mainSandwich.src = MainSandwich
   mainSandwich.setAttribute('id', 'mainsandwich')
   homeContent.appendChild(mainSandwich)
 
