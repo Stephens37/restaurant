@@ -43,12 +43,12 @@ header {
     width: 100px;
 }
 
-#contentparent {
+#content {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
 }
 
-#content {
+#homecontent {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
@@ -80,8 +80,6 @@ header {
 #location {
     grid-row: 5 / span 1;
 }
-
-
 
 footer {
     font-size: 10px;

@@ -6,31 +6,34 @@ const content = document.querySelector('#content')
 
 export function component () {
   // Add the image to our existing div.
+  const homeContent = document.createElement('div')
+  homeContent.setAttribute('id', 'homecontent')
+  content.appendChild(homeContent)
 
   const name = document.createElement('div')
   name.setAttribute('id', 'name')
   name.innerText = 'Santiagos Sandwiches'
-  content.appendChild(name)
+  homeContent.appendChild(name)
 
-  const mainSandwich = new Image();
-  mainSandwich.src = Sandwich1;
+  const mainSandwich = new Image()
+  mainSandwich.src = Sandwich1
   mainSandwich.setAttribute('id', 'mainsandwich')
-  content.appendChild(mainSandwich)
+  homeContent.appendChild(mainSandwich)
 
   const review = document.createElement('div')
   review.setAttribute = ('id', 'description')
   review.innerText = 'This restaurant is great'
-  content.appendChild(review)
+  homeContent.appendChild(review)
 
   const hours = document.createElement('div')
   hours.setAttribute('id', 'hours')
   hours.innerText = 'Open every day 9AM-7PM'
-  content.appendChild(hours)
+  homeContent.appendChild(hours)
 
   const location = document.createElement('div')
   location.setAttribute('id', 'location')
   location.innerText = 'Located at 555 Tomato Ave'
-  content.appendChild(location)
+  homeContent.appendChild(location)
 
-  return { name, mainSandwich, review }
+  return homeContent
 }
