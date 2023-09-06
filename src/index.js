@@ -1,12 +1,8 @@
 import _ from 'lodash';
-import { homeContent, component } from './elements.js'
 import './style.css'
-import { menuContent, menu } from './menu.js'
-import { contactContent, contact } from './contact.js'
-
-
-component()
-menu()
+import { homeFunction } from './elements.js'
+import { menuFunction } from './menu.js'
+import { contactFunction } from './contact.js'
 
 const body = document.querySelector('body')
 
@@ -27,7 +23,8 @@ function homeButton () {
   home.setAttribute('id', 'homebutton')
   home.innerText = 'Home'
   headers.append(home)
-  home.addEventListener('click', component)
+  home.addEventListener('click', homeFunction)
+  home.addEventListener('click', whichPage)
   return home
 }
 homeButton()
@@ -39,6 +36,8 @@ function menuButton () {
   menu.setAttribute('id', 'menubutton')
   menu.innerText = 'Menu'
   headers.append(menu)
+  menu.addEventListener('click', menuFunction)
+  menu.addEventListener('click', whichPage)
   return menu
 }
 menuButton()
@@ -50,6 +49,8 @@ function contactButton () {
   contact.setAttribute('id', 'contactbutton')
   contact.innerText = 'Contact'
   headers.append(contact)
+  contact.addEventListener('click', contactFunction)
+  contact.addEventListener('click', whichPage)
   return contact
 }
 contactButton()
@@ -65,22 +66,24 @@ function whichPage () {
   const menus = document.querySelector('#menubutton')
   const contacts = document.querySelector('#contactbutton')
 
-  if (homes.addEventListener('click', component) === true) {
+  const homeContent = document.querySelector('#homecontent')
+  const menuContent = document.querySelector('#menucontent')
+  const contactContent = document.querySelector('#contactcontent')
+
+  if (homes.addEventListener('click', whichPage) === true) {
+    homeFunction()
     homeContent.style.display = 'grid'
     menuContent.style.display = 'none'
     contactContent.style.display = 'none'
-  } else if (menus.addEventListener('click', component) === true) {
+  } else if (menus.addEventListener('click', whichPage) === true) {
+    menuFunction()
     menuContent.style.display = 'grid'
     homeContent.style.display = 'none'
     contactContent.style.display = 'none'
-  } else if (contacts.addEventListener('click', component) === true) {
+  } else if (contacts.addEventListener('click', whichPage) === true) {
+    contactFunction()
     contactContent.style.display = 'grid'
     homeContent.style.display = 'none'
     menuContent.style.display = 'none'
-  } else {
-    homeContent.style.display = 'grid'
-    menuContent.style.display = 'none'
-    contactContent.style.display = 'none'
   }
 }
-whichPage()

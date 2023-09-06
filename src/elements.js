@@ -4,10 +4,12 @@ import './style.css'
 
 const content = document.querySelector('#content')
 
-export function component () {
+export function homeFunction () {n
   // Add the image to our existing div.
   const homeContent = document.createElement('div')
   homeContent.setAttribute('id', 'homecontent')
+  homeContent.style.display = 'grid'
+
   content.appendChild(homeContent)
 
   const name = document.createElement('div')
@@ -37,3 +39,4 @@ export function component () {
 
   return homeContent
 }
+homeFunction()

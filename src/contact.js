@@ -4,7 +4,7 @@ import Delicious from './delicious.jpg'
 
 const content = document.querySelector('#content')
 
-export function contact () {
+export function contactFunction () {
   const contactContent = document.createElement('div')
   contactContent.setAttribute('id', 'contactcontent')
   content.appendChild(contactContent)
@@ -31,4 +31,3 @@ export function contact () {
 
   return contactContent
 }
-contact()

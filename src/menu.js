@@ -2,11 +2,11 @@ import _ from 'lodash'
 import './style.css'
 import Sandwich1 from './cucumber_sandwich.jpg'
 import Sandwich2 from './Dads-Denver-Sandwiches-600x400.jpg'
-import Sandwich3 from './SPAGHETTI-SANDWICHES3'
+import Sandwich3 from './SPAGHETTI-SANDWICHES3.jpg'
 
 const content = document.querySelector('#content')
 
-export function menu () {
+export function menuFunction () {
   const menuContent = document.createElement('div')
   menuContent.setAttribute('id', 'menucontent')
   content.appendChild(menuContent)
@@ -46,4 +46,3 @@ export function menu () {
   sand3Text.innerText = 'Spaghetti Sandwich'
   menuContent.appendChild(sand3Text)
 }
-menu()
