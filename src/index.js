@@ -71,19 +71,17 @@ function whichPage () {
   const contactContent = document.querySelector('#contactcontent')
 
   if (homes.addEventListener('click', whichPage) === true) {
-    homeFunction()
     homeContent.style.display = 'grid'
     menuContent.style.display = 'none'
     contactContent.style.display = 'none'
   } else if (menus.addEventListener('click', whichPage) === true) {
-    menuFunction()
     menuContent.style.display = 'grid'
     homeContent.style.display = 'none'
     contactContent.style.display = 'none'
   } else if (contacts.addEventListener('click', whichPage) === true) {
-    contactFunction()
     contactContent.style.display = 'grid'
     homeContent.style.display = 'none'
     menuContent.style.display = 'none'
   }
 }
+whichPage()

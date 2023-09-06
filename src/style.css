@@ -49,7 +49,6 @@ header {
 }
 
 #homecontent {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
     height: 100%;
@@ -82,16 +81,17 @@ header {
 }
 
 #menucontent {
-    display: none;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 2fr;
 }
 
 #contactcontent {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr 1fr;
 }
+
+
 
 footer {
     font-size: 10px;
