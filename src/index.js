@@ -4,6 +4,10 @@ import { homeFunction } from './elements.js'
 import { menuFunction } from './menu.js'
 import { contactFunction } from './contact.js'
 
+homeFunction()
+menuFunction()
+contactFunction()
+
 const body = document.querySelector('body')
 
 function header () {
@@ -23,8 +27,12 @@ function homeButton () {
   home.setAttribute('id', 'homebutton')
   home.innerText = 'Home'
   headers.append(home)
-  home.addEventListener('click', homeFunction)
-  home.addEventListener('click', whichPage)
+  function whichPage () {
+    document.querySelector('#homecontent').style.display = 'grid'
+    document.querySelector('#menucontent').style.display = 'none'
+    document.querySelector('#contactcontent').style.display = 'none'
+  }
+  document.querySelector('#homebutton').addEventListener('click', whichPage)
   return home
 }
 homeButton()
@@ -36,9 +44,12 @@ function menuButton () {
   menu.setAttribute('id', 'menubutton')
   menu.innerText = 'Menu'
   headers.append(menu)
-  menu.addEventListener('click', menuFunction)
-  menu.addEventListener('click', whichPage)
-  return menu
+  function whichPage () {
+    document.querySelector('#menucontent').style.display = 'grid'
+    document.querySelector('#homecontent').style.display = 'none'
+    document.querySelector('#contactcontent').style.display = 'none'
+  }
+  document.querySelector('#menubutton').addEventListener('click', whichPage)
 }
 menuButton()
 
@@ -49,8 +60,12 @@ function contactButton () {
   contact.setAttribute('id', 'contactbutton')
   contact.innerText = 'Contact'
   headers.append(contact)
-  contact.addEventListener('click', contactFunction)
-  contact.addEventListener('click', whichPage)
+  function whichPage () {
+    document.querySelector('#contactcontent').style.display = 'grid'
+    document.querySelector('#homecontent').style.display = 'none'
+    document.querySelector('#menucontent').style.display = 'none'
+  }
+  document.querySelector('#contactbutton').addEventListener('click', whichPage)
   return contact
 }
 contactButton()
@@ -60,28 +75,3 @@ function footer () {
   body.appendChild(footer)
 }
 footer()
-
-function whichPage () {
-  const homes = document.querySelector('#homebutton')
-  const menus = document.querySelector('#menubutton')
-  const contacts = document.querySelector('#contactbutton')
-
-  const homeContent = document.querySelector('#homecontent')
-  const menuContent = document.querySelector('#menucontent')
-  const contactContent = document.querySelector('#contactcontent')
-
-  if (homes.addEventListener('click', whichPage) === true) {
-    homeContent.style.display = 'grid'
-    menuContent.style.display = 'none'
-    contactContent.style.display = 'none'
-  } else if (menus.addEventListener('click', whichPage) === true) {
-    menuContent.style.display = 'grid'
-    homeContent.style.display = 'none'
-    contactContent.style.display = 'none'
-  } else if (contacts.addEventListener('click', whichPage) === true) {
-    contactContent.style.display = 'grid'
-    homeContent.style.display = 'none'
-    menuContent.style.display = 'none'
-  }
-}
-whichPage()

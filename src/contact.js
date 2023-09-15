@@ -12,7 +12,7 @@ export function contactFunction () {
   const contactTitle = document.createElement('div')
   contactTitle.setAttribute('id', 'contactTitle')
   contactTitle.innerText = 'Contact Us'
-  content.appendChild(contactTitle)
+  contactContent.appendChild(contactTitle)
 
   const delicious = new Image()
   delicious.src = Delicious
@@ -22,12 +22,13 @@ export function contactFunction () {
   const contactNumber = document.createElement('div')
   contactNumber.setAttribute('id', 'contactNumber')
   contactNumber.innerText = '1-555-555-5555'
-  content.appendChild(contactNumber)
+  contactContent.appendChild(contactNumber)
 
   const contactLocation = document.createElement('div')
   contactLocation.setAttribute('id', 'contactLocation')
   contactLocation.innerText = '123 Street Ave'
-  content.appendChild(contactLocation)
+  contactContent.appendChild(contactLocation)
 
   return contactContent
 }
+contactFunction()

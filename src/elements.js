@@ -8,7 +8,6 @@ export function homeFunction () {
   // Add the image to our existing div.
   const homeContent = document.createElement('div')
   homeContent.setAttribute('id', 'homecontent')
-  homeContent.style.display = 'grid'
 
   content.appendChild(homeContent)
 
@@ -39,3 +38,4 @@ export function homeFunction () {
 
   return homeContent
 }
+homeFunction()

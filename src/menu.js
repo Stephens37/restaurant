@@ -19,6 +19,7 @@ export function menuFunction () {
   const sandwich1 = new Image()
   sandwich1.src = Sandwich1
   sandwich1.setAttribute('id', 'sandwich1')
+  sandwich1.setAttribute('class', 'sandwiches')
   menuContent.appendChild(sandwich1)
 
   const sand1Text = document.createElement('div')
@@ -29,6 +30,7 @@ export function menuFunction () {
   const sandwich2 = new Image()
   sandwich2.src = Sandwich2
   sandwich2.setAttribute('id', 'sandwich2')
+  sandwich1.setAttribute('class', 'sandwiches')
   menuContent.appendChild(sandwich2)
 
   const sand2Text = document.createElement('div')
@@ -39,6 +41,7 @@ export function menuFunction () {
   const sandwich3 = new Image()
   sandwich3.src = Sandwich3
   sandwich3.setAttribute('id', 'sandwich3')
+  sandwich3.setAttribute('class', 'sandwiches')
   menuContent.appendChild(sandwich3)
 
   const sand3Text = document.createElement('div')
@@ -46,3 +49,4 @@ export function menuFunction () {
   sand3Text.innerText = 'Spaghetti Sandwich'
   menuContent.appendChild(sand3Text)
 }
+menuFunction()
