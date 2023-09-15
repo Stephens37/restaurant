@@ -49,4 +49,3 @@ export function menuFunction () {
   sand3Text.innerText = 'Spaghetti Sandwich'
   menuContent.appendChild(sand3Text)
 }
-menuFunction()

@@ -38,4 +38,3 @@ export function homeFunction () {
 
   return homeContent
 }
-homeFunction()
