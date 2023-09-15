@@ -22,8 +22,8 @@ export function homeFunction () {
   homeContent.appendChild(mainSandwich)
 
   const review = document.createElement('div')
-  review.setAttribute = ('id', 'description')
-  review.innerText = 'This restaurant is great'
+  review.setAttribute('id', 'review')
+  review.innerText = '"This restaurant is great" - G. Ramsay'
   homeContent.appendChild(review)
 
   const hours = document.createElement('div')
