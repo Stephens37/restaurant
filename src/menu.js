@@ -24,17 +24,19 @@ export function menuFunction () {
 
   const sand1Text = document.createElement('div')
   sand1Text.setAttribute('id', 'sand1text')
+  sand1Text.setAttribute('class', 'sandtexts')
   sand1Text.innerText = 'Cucumber Sandwich'
   menuContent.appendChild(sand1Text)
 
   const sandwich2 = new Image()
   sandwich2.src = Sandwich2
   sandwich2.setAttribute('id', 'sandwich2')
-  sandwich1.setAttribute('class', 'sandwiches')
+  sandwich2.setAttribute('class', 'sandwiches')
   menuContent.appendChild(sandwich2)
 
   const sand2Text = document.createElement('div')
   sand2Text.setAttribute('id', 'sand2text')
+  sand2Text.setAttribute('class', 'sandtexts')
   sand2Text.innerText = 'Dads Denver Sandwich'
   menuContent.appendChild(sand2Text)
 
@@ -46,6 +48,7 @@ export function menuFunction () {
 
   const sand3Text = document.createElement('div')
   sand3Text.setAttribute('id', 'sand3text')
+  sand3Text.setAttribute('class', 'sandtexts')
   sand3Text.innerText = 'Spaghetti Sandwich'
   menuContent.appendChild(sand3Text)
 }
