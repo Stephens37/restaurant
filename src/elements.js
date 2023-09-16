@@ -5,7 +5,6 @@ import './style.css'
 const content = document.querySelector('#content')
 
 export function homeFunction () {
-  // Add the image to our existing div.
   const homeContent = document.createElement('div')
   homeContent.setAttribute('id', 'homecontent')
 
